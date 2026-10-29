@@ -1,59 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🍔 Projet de développement web : ZeDuc@Space — Mon Miam Miam
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-12.70-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-## About Laravel
+**ZeDuc@Space** est une plateforme web centralisée et complète développée pour la gestion de la restauration étudiante au sein du campus de l'Institut Ucac-Icam. Elle permet de fluidifier la prise de commande, d'intégrer des paiements mobiles (Mobile Money) et d'animer la vie étudiante via un programme de fidélité et de parrainage, tout en offrant un back-office complet pour le personnel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fonctionnalités Principales de la Plateforme
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Espace Étudiant (Client) :** 
+  * Consultation du catalogue complet, des menus et des plats du jour.
+  * Prise de commande en ligne avec gestion avancée du panier.
+  * Programme de fidélité automatisé (1 point crédité uniquement à la livraison effective de la commande).
+  * Système de parrainage avec codes uniques.
+  * Suivi des commandes en temps réel et module de dépôt de réclamations.
+- **Espace Employé (Cuisine & Comptoir) :** 
+  * Suivi et gestion du cycle de vie des commandes en direct (En attente ➔ En préparation ➔ Prête ➔ Livrée/Terminée).
+  * Gestion rapide de la disponibilité des plats (mise en rupture de stock en un clic).
+- **Espace Administration (Back-Office) :** 
+  * Gestion complète du catalogue (Création/Modification des Plats, Catégories, Prix).
+  * Planification et publication des événements et promotions du campus (avec affichage conditionnel selon la date).
+  * Traitement des réclamations étudiantes.
+- **Classement Dynamique :** Affichage en temps réel d'un Top 10 des clients les plus fidèles (filtrable par jour, semaine, mois).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Stack Technique
 
-## Learning Laravel
+- **Backend :** PHP 8.2, Laravel 12 (Architecture MVC)
+- **Frontend :** Laravel Blade, Bootstrap 5.0.2, Bootstrap Icons
+- **Base de données :** MySQL / MariaDB (SQLite pour les tests locaux)
+- **Passerelle de paiement :** API REST CinetPay
+- **Outils :** Git, Composer
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+> ⚠️ **Note d'intégration :** La fonctionnalité de simulation de paiement via l'API CinetPay (Orange Money / MTN MoMo) est en cours d'intégration et n'est pas encore totalement finalisée. Le paiement en espèces reste l'alternative fonctionnelle par défaut.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Installation & Configuration en local
 
-## Laravel Sponsors
+### Prérequis
+- PHP 8.2 ou supérieur
+- Composer
+- Un serveur MySQL (XAMPP, Laragon, WAMP, etc.)
+- Git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Étapes d'installation
 
-### Premium Partners
+1. **Cloner le dépôt sur votre machine locale :**
+   ```bash
+   git clone [https://github.com/pyraxone39-arch/projet-web-zeduc-space.git](https://github.com/pyraxone39-arch/projet-web-zeduc-space.git)
+   cd backend-zeduc-space
+	
+2.Installer les dépendances PHP :
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Bash
+composer install
 
-## Contributing
+3.Configurer l'environnement :
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4.Dupliquer le fichier d'exemple : cp .env.example .env
 
-## Code of Conduct
+5.Générer la clé d'application : php artisan key:generate
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6.Configurer la base de données dans le .env :
 
-## Security Vulnerabilities
+Extrait de code
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mon_miam_miam
+DB_USERNAME=root
+DB_PASSWORD=
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7.Préparer la base de données :
 
-## License
+Bash
+php artisan migrate:fresh --seed
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8.Lancer le serveur de développement :
+
+
+Sécurité et Rôles
+L'application utilise les Middlewares Laravel pour isoler strictement les espaces :
+
+role:student : Accès exclusif aux commandes et au programme de fidélité.
+
+role:employee / role:admin : Accès au back-office de gestion.
+
+Protection contre les failles CSRF, XSS et injections SQL nativement gérée par Laravel Eloquent.
+
+
+(Projet réalisé dans le cadre de la formation à l'Institut Ucac-Icam)
+
+Bash
+php artisan serve
+L'application sera accessible sur http://127.0.0.1:8000.
